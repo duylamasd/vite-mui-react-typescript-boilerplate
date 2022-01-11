@@ -41,6 +41,15 @@ const App = () => {
               display: true,
               text: "Chart.js Line Chart",
             },
+            tooltip: {
+              callbacks: {
+                title: (items) => {
+                  return items.map((item) => {
+                    return item.label.toUpperCase();
+                  });
+                },
+              },
+            },
           },
         }}
         data={chartData}
